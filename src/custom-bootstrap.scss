@@ -1,0 +1,116 @@
+$black: #000 !default;
+
+$theme-colors: (
+  "primary":    #344D67,
+  "success": #68B984,
+  "danger": #9C254D
+) !default;
+
+$link-decoration: none !default;
+$link-color: $black !default;
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "./components/Header/Header.scss";
+
+.link-btn {
+    border: none;
+    background: none;
+    padding: 0;
+    color: $black;
+    display: inline;
+
+    &:hover,
+    &:active {
+        background: none;
+        border: none;
+        padding: 0;
+    }
+}
+
+.admin-layout {
+    display: flex;
+
+    .sidenav-wrapper {
+        flex-basis: 20%;
+        max-width: 20%;
+    }
+
+    .page-content {
+        flex-grow: 1;
+        padding: 2rem;
+    }
+}
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.2rem;
+    font-size: 1.5rem;
+    color: $black;
+    align-items: flex-start;
+    padding: 2rem;
+    border-right: 1px solid $dark;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: auto;
+}
+
+.collapse-nav {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color: $dark;
+}
+
+.data-list {
+    .data-list-header {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .data-item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .list-name {
+        flex-basis: 20%;
+        max-width: 20%;
+    }
+
+    .list-email {
+        flex-basis: 20%;
+        max-width: 20%;
+    }
+
+    .list-userrole {
+        flex-basis: 20%;
+        max-width: 20%;
+    }
+
+    .list-usertype {
+        flex-basis: 20%;
+        max-width: 20%;
+    }
+
+    .list-actions {
+        flex-basis: 20%;
+        max-width: 20%;
+    }
+}
+.modal-content {
+    border: none;
+    padding: 1.5rem;
+}
+.card {
+    > img {
+        height: 190px;
+        object-fit: cover;
+    }
+}
+.btn {
+    font-weight: 700;
+}
